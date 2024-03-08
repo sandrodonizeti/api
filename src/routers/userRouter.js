@@ -8,10 +8,10 @@ import auth from '../middlewares/auth.js'
 
 const router = express.Router()
 
-router.get('/', auth, getUser)
+router.get('/', getUser)
 router.get('/list', auth, listUsers)
 router.post('/', insertUser)
-router.put('/', auth, updateUser)
+router.put('/', updateUser)
 router.delete('/', auth, deleteUser)
 
 export default router

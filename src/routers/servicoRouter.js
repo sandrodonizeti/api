@@ -11,7 +11,7 @@ const router = express.Router()
 router.get('/', getServico)
 router.get('/list',auth, listServico)
 router.post('/', insertServico)
-router.put('/',auth, updateServico)
+router.put('/', updateServico)
 router.delete('/',auth, deleteServico)
 
   
