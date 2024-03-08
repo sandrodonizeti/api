@@ -10,7 +10,10 @@ import servicoRouter from './routers/servicoRouter.js'
 import authRouter from './routers/authRouter.js'
 import {PORT} from './config.js' 
 
-const api = express()
+const api = express();
+const server = http.createServer(api); // Crie o servidor HTTP a partir do Express  
+const io = new Server(server); // Crie o servidor Socket.io a partir do servidor HTTP
+
 
 var corsOptions = {
     credentials: true,
